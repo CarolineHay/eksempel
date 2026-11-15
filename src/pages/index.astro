@@ -1,4 +1,11 @@
 ---
+import { Image } from "astro:assets";
+
+import catImage1 from "../assets/cat1.avif";
+import catImage2 from "../assets/cat2.avif";
+import catImage3 from "../assets/cat3.avif";
+
+import Card from "../components/Card.astro";
 ---
 
 <html lang="en">
@@ -14,6 +21,8 @@
 		<h1>Eksempel 1</h1>
 		<p>Nu skal der læres</p>
 
+		<Image src={catImage1} alt="En kat" width="250"/>
+
 		<h2>Her kommer der en paragraf</h2>
 		<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus dignissimos odio laudantium obcaecati rem, nisi numquam voluptas voluptatem, voluptate tempore velit accusantium nobis autem fugit culpa nostrum! Soluta, incidunt accusantium.</p>
 
@@ -21,10 +30,8 @@
 			<h2>Her er en section</h2>
 			<p>Her er noget tekst</p>
 
-			<article>
-				<h3>Her er en headline</h3>
-				<p>Nedenunder en tekst</p>
-			</article>
+		<Card img={catImage2} headline="Her kommer en kat" text="Det er en rigtig sød kat"/>
+		<Card img={catImage3} headline="En anden kat" text="Den er også okay"/>
 		</section>
 	</body>
 </html>
